@@ -1,0 +1,17 @@
+Sur windows git bash here, sur linux/mac terminal (clic droit)
+
+Pour copier (créer localement):
+git clone url_repository
+
+Pour pousser : 
+ETRE DANS LE DOSSIER GIT
+git add ./
+git commit -m "explications nouvelles modif"
+git push
+
+Pour récupérer : 
+git pull
+
+Pour les branches :
+créer: git branch nom_branche
+changer de branche : git checkout nom_branche
