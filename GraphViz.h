@@ -22,11 +22,11 @@
 //
 //------------------------------------------------------------------------
 
-class GraphViz : public Ancetre
+class GraphViz
 {
 //----------------------------------------------------------------- PUBLIC
 
-public/*************************************************************************
+public:/*************************************************************************
                            GraphViz  -  description
                              -------------------
     début                : $DATE$
@@ -35,8 +35,8 @@ public/*************************************************************************
 *************************************************************************/
 
 //---------- Interface de la classe <GraphViz> (fichier GraphViz.h) ----------------
-#if ! defined ( GraphViz_H )
-#define GraphViz_H
+#if ! defined ( GRAPHVIZ_H )
+#define GRAPHVIZ_H
 
 //--------------------------------------------------- Interfaces utilisées
 
@@ -50,7 +50,7 @@ public/*************************************************************************
 //
 //------------------------------------------------------------------------
 
-class GraphViz : public Ancetre
+class GraphViz 
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -64,7 +64,7 @@ public:
 
     GraphViz ( vector<vector<string>> infos);
 
-    Ecriture ( const char* nomFichier, vector<vector<string>> infos);
+    void Ecriture ( const char* nomFichier, vector<vector<string>> infos);
 
 
     // Mode d'emploi :

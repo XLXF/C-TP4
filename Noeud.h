@@ -24,7 +24,7 @@
 //
 //------------------------------------------------------------------------
 
-class Noeud : public Ancetre
+class Noeud
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -58,13 +58,13 @@ public:
     // Contrat :
     //
 
-    update (string nomSource);
+    void update (string nomSource);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    updateCompteur ();
+    void updateCompteur ();
     // Mode d'emploi :
     //
     // Contrat :

@@ -18,6 +18,7 @@ using namespace std;
 //------------------------------------------------------ Include personnel
 #include "Main.h"
 
+
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
@@ -57,23 +58,28 @@ Main::Main ( )
     cout << "Appel au constructeur de <Main>" << endl;
 #endif
 } //----- Fin de Main
-Main::setInfos(string nomFichier)
+void Main::setoffset()
+{
+    this.offset = 0;
+}
+
+void Main::setInfos(string nomFichier)
 {
 #ifdef MAP
     cout << "Appel au constructeur de infos;" << endl;
 #endif
-    infos = new vector<vector<String>>;
+    infos = new vector<vector<string>>;
     infos = Lecturelog(nomFichier);
 } //----- Fin de Main
 
-Main::setEmsemble()
+void Main::setEmsemble()
 {
 #ifdef MAP
     cout << "Appel au constructeur d'ensemble;" << endl;
 #endif
     string source;
     string target;
-    emsemble = new map <String, Noeud>;
+    emsemble = new map <string, Noeud>;
     for (auto it = infos.begin(); it != infos.end(); it++)
     {
 
@@ -83,7 +89,7 @@ Main::setEmsemble()
     }
 } //----- Fin de Main
 
-Main::update(string target,string source)
+void Main::update(string target,string source)
 {
 #ifdef MAP
     cout << "Appel au constructeur d'ensemble"<< endl;
@@ -111,4 +117,3 @@ Main::~Main ( )
 //------------------------------------------------------------------ PRIVE
 
 //----------------------------------------------------- Méthodes protégées
-

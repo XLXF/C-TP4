@@ -13,6 +13,10 @@
 #include <vector>
 #include <string>
 
+#include "LectureLog.h"
+#include "GraphViz.h"
+#include "Noeud.h"
+
 //--------------------------------------------------- Interfaces utilisées
 
 //------------------------------------------------------------- Constantes
@@ -25,7 +29,7 @@
 //
 //------------------------------------------------------------------------
 
-class Main : public Ancetre
+class Main
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -58,21 +62,21 @@ public:
     //
     // Contrat :
 
-    setoffset();
+    void setoffset();
     // Mode d'emploi :
     //
     // Contrat :
     
-    setInfos(vector<vector<String>> values);
+    void setInfos(string nomFichier);
     // Mode d'emploi :
     //
     // Contrat :
 
-    setEmsemble();
+    void setEmsemble();
     // Mode d'emploi :
     //
     // Contrat :
-    update(string target,string source);
+    void update(string target,string source);
 
     virtual ~Main ( );
     // Mode d'emploi :
@@ -85,9 +89,9 @@ public:
 protected:
 //----------------------------------------------------- Méthodes protégées
 
-vector<vector<String>> infos
-int offset
-map <String, Noeud> ensemble
+vector<vector<string>> infos;
+int offset;
+map <string, Noeud> ensemble;
 //----------------------------------------------------- Attributs protégés
 
 };

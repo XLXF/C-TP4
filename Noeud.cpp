@@ -70,7 +70,7 @@ int Noeud::getcompteur ( )( )
     return compteur;
 } //----- Fin de Xxx
 
-Noeud::unpdate (string nomSource)
+void Noeud::unpdate (string nomSource)
 // Algorithme :
 //
 {
@@ -86,7 +86,7 @@ Noeud::unpdate (string nomSource)
 
 } //----- Fin de Xxx
 
-Noeud::unpdateCompteur ()
+void Noeud::unpdateCompteur ()
 // Algorithme :
 //
 {

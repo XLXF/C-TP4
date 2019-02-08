@@ -44,7 +44,7 @@ GraphViz::GraphViz(map<string, Noeud> ensemble)
    	}
 	cout<<"on numeroter les adresse departs"<<endl;
 }
-GraphViz::Ecriture ( const char* nomFichier, map<string, Noeud> ensemble)
+void GraphViz::Ecriture ( const char* nomFichier, map<string, Noeud> ensemble)
 // Algorithme :
 //
 {
