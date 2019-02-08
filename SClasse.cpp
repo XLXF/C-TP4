@@ -1,12 +1,12 @@
 /*************************************************************************
-                           Noeud  -  description
+                           Xxx  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Réalisation de la classe <Noeud> (fichier Noeud.cpp) ------------
+//---------- Réalisation de la classe <Xxx> (fichier Xxx.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -15,14 +15,14 @@
 using namespace std;
 
 //------------------------------------------------------ Include personnel
-#include "Noeud.h"
+#include "Xxx.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Noeud::Méthode ( liste des paramètres )
+// type Xxx::Méthode ( liste des paramètres )
 // Algorithme :
 //
 //{
@@ -30,7 +30,7 @@ using namespace std;
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-Noeud & Noeud::operator = ( const Noeud & unNoeud )
+Xxx & Xxx::operator = ( const Xxx & unXxx )
 // Algorithme :
 //
 {
@@ -38,7 +38,7 @@ Noeud & Noeud::operator = ( const Noeud & unNoeud )
 
 
 //-------------------------------------------- Constructeurs - destructeur
-Noeud::Noeud ( const Noeud & unNoeud )
+Xxx::Xxx ( const Xxx & unXxx )
 // Algorithme :
 //
 {
@@ -48,64 +48,23 @@ Noeud::Noeud ( const Noeud & unNoeud )
 } //----- Fin de Xxx (constructeur de copie)
 
 
-Noeud::Noeud (string nomSource )
+Xxx::Xxx ( )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <Noeud>" << endl;
+    cout << "Appel au constructeur de <Xxx>" << endl;
 #endif
-    grapheInfo = new map <string, int>;
-    grapheInfo[nomSource] = 1;
-    compteur =1;
-} //----- Fin de Xxx
-
-int Noeud::getcompteur ( )( )
-// Algorithme :
-//
-{
-#ifdef MAP
-    cout << "get compteur" << endl;
-#endif
-    return compteur;
-} //----- Fin de Xxx
-
-Noeud::unpdate (string nomSource)
-// Algorithme :
-//
-{
-#ifdef MAP
-    cout << "Update Noeud " << endl;
-#endif
-	auto it = mymap.find(nomSource);
- 	if (it != mymap.end())
-    	grapheInfo[nomSource]++;
-    else 
-    	grapheInfo[nomSource] = 1;
-    unpdateCompteur ();
-
-} //----- Fin de Xxx
-
-Noeud::unpdateCompteur ()
-// Algorithme :
-//
-{
-#ifdef MAP
-    cout << "Update variable compteur" << endl;
-#endif
-    compteur ++;
 } //----- Fin de Xxx
 
 
-Noeud::~Noeud ( )
+Xxx::~Xxx ( )
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au destructeur de <Xxx>" << endl;
 #endif
-    grapheInfo.clear();
-    delete grapheInfo;
 } //----- Fin de ~Xxx
 
 

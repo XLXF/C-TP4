@@ -1,16 +1,14 @@
 /*************************************************************************
-                           Noeud  -  description
+                           Xxx  -  description
                              -------------------
     début                : $DATE$
     copyright            : (C) $YEAR$ par $AUTHOR$
     e-mail               : $EMAIL$
 *************************************************************************/
 
-//---------- Interface de la classe <Noeud> (fichier Noeud.h) ----------------
-#if ! defined ( NOEUD_H )
-#define NOEUD_H
-#include <map>
-#include <string>
+//---------- Interface de la classe <Xxx> (fichier Xxx.h) ----------------
+#if ! defined ( XXX_H )
+#define XXX_H
 
 //--------------------------------------------------- Interfaces utilisées
 
@@ -24,7 +22,7 @@
 //
 //------------------------------------------------------------------------
 
-class Noeud : public Ancetre
+class Xxx : public Ancetre
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -38,7 +36,7 @@ public:
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-    Noeud & operator = ( const Noeud & unNoeud );
+    Xxx & operator = ( const Xxx & unXxx );
     // Mode d'emploi :
     //
     // Contrat :
@@ -46,39 +44,19 @@ public:
 
 
 //-------------------------------------------- Constructeurs - destructeur
-    Noeud ( const Noeud & unNoeud );
+    Xxx ( const Xxx & unXxx );
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    Noeud (string nomSource);
+    Xxx ( );
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    update (string nomSource);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
-    updateCompteur ();
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
-    int getcompteur ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
-
-
-    virtual ~Noeud ( );
+    virtual ~Xxx ( );
     // Mode d'emploi :
     //
     // Contrat :
@@ -88,13 +66,12 @@ public:
 
 protected:
 //----------------------------------------------------- Méthodes protégées
-map <string, int> grapheInfo;
-int compteur;
+
 //----------------------------------------------------- Attributs protégés
 
 };
 
-//-------------------------------- Autres définitions dépendantes de <Noeud>
+//-------------------------------- Autres définitions dépendantes de <Xxx>
 
-#endif // NOEUD_H
+#endif // XXX_H
 
