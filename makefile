@@ -2,7 +2,7 @@ ECHO = echo
 RM = rm
 COMP = g++
 EDL = g++
-INT = Main.h LectureLog.h 
+INT = Main.h LectureLog.h GraphViz.h Noeud.h
 REAL = $(INT:.h=.cpp)
 OBJ = $(REAL:.cpp=.o)
 EXE = prog
@@ -25,4 +25,8 @@ $(EXE) : $(OBJ)
 Main.o : Main.cpp Main.h
 
 LectureLog.o : LectureLog.cpp LectureLog.h
+
+GraphViz.o : GraphViz.cpp GraphViz.h
+
+Noeud.o : Noeud.cpp Noeud.h
 
