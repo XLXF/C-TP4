@@ -9,8 +9,6 @@
 //---------- Interface de la classe <Noeud> (fichier Noeud.h) ----------------
 #if ! defined ( NOEUD_H )
 #define NOEUD_H
-#include <map>
-#include <string>
 
 //--------------------------------------------------- Interfaces utilisées
 
@@ -19,7 +17,7 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Xxx>
+// Rôle de la classe <Noeud>
 //
 //
 //------------------------------------------------------------------------
@@ -38,7 +36,7 @@ public:
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-    Noeud & operator = ( const Noeud & unNoeud );
+//    Noeud & operator = ( const Noeud & unNoeud );
     // Mode d'emploi :
     //
     // Contrat :
@@ -70,7 +68,7 @@ public:
     // Contrat :
     //
 
-    int getcompteur ( );
+    int getCompteur ( );
     // Mode d'emploi :
     //
     // Contrat :

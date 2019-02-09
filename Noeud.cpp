@@ -13,7 +13,8 @@
 //-------------------------------------------------------- Include système
 #include <iostream>
 using namespace std;
-
+#include <map>
+#include <string>
 //------------------------------------------------------ Include personnel
 #include "Noeud.h"
 
@@ -30,11 +31,12 @@ using namespace std;
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-Noeud & Noeud::operator = ( const Noeud & unNoeud )
+//Noeud & Noeud::operator = ( const Noeud & unNoeud )
 // Algorithme :
 //
-{
-} //----- Fin de operator =
+//{
+//    return ((unNoeud.grapheInfo == this->grapheInfo) && (unNoeud.compteur == this->compteur));	
+//} //----- Fin de operator =
 
 
 //-------------------------------------------- Constructeurs - destructeur
@@ -45,6 +47,11 @@ Noeud::Noeud ( const Noeud & unNoeud )
 #ifdef MAP
     cout << "Appel au constructeur de copie de <Xxx>" << endl;
 #endif
+    compteur = unNoeud.compteur;
+    for ( auto & x: unNoeud.grapheInfo )
+    {
+	    grapheInfo.insert(x);
+    }
 } //----- Fin de Xxx (constructeur de copie)
 
 
@@ -53,46 +60,40 @@ Noeud::Noeud (string nomSource )
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <Noeud>" << endl;
+    cout << "Appel au constructeur de <Xxx>" << endl;
 #endif
-    grapheInfo = new map <string, int>;
-    grapheInfo[nomSource] = 1;
-    compteur =1;
+    grapheInfo.insert(pair<string,int>(nomSource,1));
+    compteur = 1;
 } //----- Fin de Xxx
 
-int Noeud::getcompteur ( )( )
+int Noeud::getCompteur ( )
 // Algorithme :
 //
 {
-#ifdef MAP
-    cout << "get compteur" << endl;
-#endif
     return compteur;
 } //----- Fin de Xxx
 
-void Noeud::unpdate (string nomSource)
+void Noeud::update (string nomSource)
 // Algorithme :
 //
 {
-#ifdef MAP
-    cout << "Update Noeud " << endl;
-#endif
-	auto it = mymap.find(nomSource);
- 	if (it != mymap.end())
-    	grapheInfo[nomSource]++;
-    else 
-    	grapheInfo[nomSource] = 1;
-    unpdateCompteur ();
+	auto it = grapheInfo.find(nomSource);
+ 	if (it != grapheInfo.end())
+	{
+    	    grapheInfo[nomSource]++;
+	}
+        else
+	{	
+    	    grapheInfo.insert(pair<string,int>(nomSource,1));
+	}
+	updateCompteur();
 
 } //----- Fin de Xxx
 
-void Noeud::unpdateCompteur ()
+void Noeud::updateCompteur ()
 // Algorithme :
 //
 {
-#ifdef MAP
-    cout << "Update variable compteur" << endl;
-#endif
     compteur ++;
 } //----- Fin de Xxx
 
@@ -104,8 +105,6 @@ Noeud::~Noeud ( )
 #ifdef MAP
     cout << "Appel au destructeur de <Xxx>" << endl;
 #endif
-    grapheInfo.clear();
-    delete grapheInfo;
 } //----- Fin de ~Xxx
 
 
